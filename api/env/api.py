@@ -1,6 +1,5 @@
 import flask
 from flask import request, jsonify
-from dicttoxml import dicttoxml
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
@@ -23,7 +22,6 @@ knjige = [
 ]
 
 #nova = '{"id" : 3, "naslov" : "The Silmarillion", "avtor" : "J. R. R. Tolkien", "izdaja" : 1977}'
-
 @app.route('/', methods=['GET'])
 def home():
     return 'Imamo knjige za sposodit!'
